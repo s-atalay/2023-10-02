@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DataCastingSoru1 {
 
     /*
-    Kullanicidan double olarak alinan 3 degerin ortalamsini int olarak yazdıralım
+    Kullanicidan double olarak alinan 3 degerin ortalamasini int olarak yazdıralım
      */
     public static void main(String[] args) {
 

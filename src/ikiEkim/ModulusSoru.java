@@ -6,7 +6,7 @@ public class ModulusSoru {
 
     /*
     Kullanıcıdan 4 basamaklı pozitif bir tamsayı alıp rakamlar toplamını bulalım
-    Eger yanlıs sayi girerse tekrar isteyelim
+    Eger istedigimiz formatın dısında sayi girerse tekrar isteyelim
      */
     public static void main(String[] args) {
 
