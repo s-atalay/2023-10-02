@@ -1,4 +1,4 @@
-package ikiEkim;
+package örnekSorular;
 
 import java.util.Scanner;
 
