@@ -1,8 +1,8 @@
-package örnekSorular;
+package Day02;
 
 import java.util.Scanner;
 
-public class EmekliSorusu {
+public class Emekli {
     /*
     Kullanıcıdan cinsiyetini ve yasini alin, Kadin 60 yas ve üzeri, Erkek 65 yas ve üzeri emekli olabilir.
     Cinsiyet ve yasini dikkate alarak "Emekli olabilirsin" veya "Emekli olmak için ... yil daha çalisman gerekir" yazdirin.

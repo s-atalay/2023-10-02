@@ -1,8 +1,8 @@
-package örnekSorular;
+package Day01;
 
 import java.util.Scanner;
 
-public class ModulusSoru {
+public class Modulus {
 
     /*
     Kullanıcıdan 4 basamaklı pozitif bir tamsayı alıp rakamlar toplamını bulalım

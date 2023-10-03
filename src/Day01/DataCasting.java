@@ -1,8 +1,8 @@
-package örnekSorular;
+package Day01;
 
 import java.util.Scanner;
 
-public class DataCastingSoru1 {
+public class DataCasting {
 
     /*
     Kullanicidan double olarak alinan 3 degerin ortalamasini int olarak yazdıralım

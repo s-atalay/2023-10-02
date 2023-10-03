@@ -1,4 +1,4 @@
-package örnekSorular;
+package Day01;
 
 import java.util.Scanner;
 

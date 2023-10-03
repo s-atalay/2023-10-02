@@ -1,8 +1,8 @@
-package örnekSorular;
+package Day01;
 
 import java.util.Scanner;
 
-public class ByteSorusu {
+public class Byte {
 
     /*
       Kullanicidan bir sayi alin, kullanici kac degerini girerse girsin, o sayiyi -128

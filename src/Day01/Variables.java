@@ -1,8 +1,8 @@
-package örnekSorular;
+package Day01;
 
 import java.util.Scanner;
 
-public class Variables_Soru8 {
+public class Variables {
 
     /*
     Kullanıcıdan iki sayi alıp,

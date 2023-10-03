@@ -1,4 +1,4 @@
-package örnekSorular;
+package Day01;
 
 import java.util.Scanner;
 
@@ -20,9 +20,10 @@ public class Ascıı {
 
         for( int i = girilenHarf+1; i<girilenHarf+4 ; i++ ){
 
-            String str = new Character((char) i).toString();
+          //  String str = new Character((char) i).toString();
+            char c = (char) i;
 
-            System.out.print(str+" ");
+            System.out.print(c+" ");
 
         }
 
