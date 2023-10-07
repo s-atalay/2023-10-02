@@ -19,7 +19,7 @@ public class Matris {
 
             for (int j = 0; j < 5; j++) {
 
-                arr[j]= random.nextInt(10);
+                arr[j]= random.nextInt(10); // = (int)(Math.random()*10) diyebilirdik Random tanimlamamiza gerek kalmazdi
                 System.out.print(arr[j]+" ");
 
             }
