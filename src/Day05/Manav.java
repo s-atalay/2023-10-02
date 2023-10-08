@@ -17,10 +17,10 @@ public class Manav {
     public static void main(String[] args) {
 
         System.out.println("*******MANAV*******");
-        System.out.println("0- Cikis\n1- Domates\n2- Patlican\n3- Kabak\n4- Biber\n5- Elma");
+        System.out.println("1- Domates\n2- Patlican\n3- Kabak\n4- Biber\n5- Elma");
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Lütfen almak istediginiz urunu girin/Çikmak için sifira basin: ");
+        System.out.println("Lütfen almak istediginiz urunu girin: ");
         int urn = scan.nextInt();
 
         System.out.println("Lütfen almak istediginiz kiloyu girin: ");
@@ -30,22 +30,29 @@ public class Manav {
 
     public static int tutarHesaplama (int urun,int kilo) {
 
-        int[] urunListesi = {1, 2, 3, 4, 5, 0};
-        int[] fiyatListesi = {1, 20, 35, 15, 10, 12};
+        int[] urunListesi = {1, 2, 3, 4, 5};
+        int[] fiyatListesi = {20, 35, 15, 10, 12};
         Scanner scan = new Scanner(System.in);
-        int toplam=fiyatListesi[urun] * kilo;
+        int toplam=fiyatListesi[urun-1] * kilo;
+        char karar ='E';
 
         do {
-            System.out.println("Lütfen almak istediginiz urunu girin/Çikmak için sifira basin: ");
-            urun = scan.nextInt();
-            if(urun==0)break;
+            System.out.println("Baska bir urun almak ıster msisin?'E' veya 'H'ye basiniz.");
+            karar = scan.nextLine().toUpperCase().charAt(0);
 
-            System.out.println("Lütfen almak istediginiz kiloyu girin: ");
-            kilo = scan.nextInt();
-            int tplm = fiyatListesi[urun] * kilo;
-            toplam+=tplm;
+            if (karar == 'E') {
+                System.out.println("Lütfen almak istediginiz urunu girin: ");
+                int urn = scan.nextInt();
+                System.out.println("Lütfen almak istediginiz kiloyu girin: ");
+                kilo = scan.nextInt();
+                int tplm = fiyatListesi[urun] * kilo;
+                toplam += tplm;
+            }
+            else {
+                System.out.println(toplam);
 
-        } while (urun != 0);
+            }
+        } while (karar !='H');
 
         return toplam;
     }
