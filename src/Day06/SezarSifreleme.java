@@ -21,10 +21,10 @@ public class SezarSifreleme {
         System.out.println("Lütfen şifrelemek istediginiz metni giriniz:");
         String metin = scan.nextLine();
 
-        String yeniMetin = metin.replaceAll("\\W","");
+       // String yeniMetin = metin.replaceAll("\\W","");
 
-        for (int i = 0; i < yeniMetin.length(); i++) {
-            System.out.print((char)(yeniMetin.charAt(i)+1));
+        for (int i = 0; i < metin.length(); i++) {
+            System.out.print((char)(metin.charAt(i)+1));
         }
 
 

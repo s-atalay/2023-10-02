@@ -18,22 +18,28 @@ public class Fibonacci {
     }
     public static List<Integer> fibonacci(int üstSinir){
         ArrayList<Integer> fibonacci = new ArrayList<>();
+
         if(üstSinir==0){
             fibonacci.add(0);
+
         } else if (üstSinir == 1) {
             fibonacci.add(1);
+
         } else{
+
             fibonacci.add(0);
             fibonacci.add(1);
             int yeniSayi = 0;
-        for (int i = 2; i <= üstSinir; i++) {
+            int i = 2;
+            while(yeniSayi<=üstSinir){
 
             yeniSayi = fibonacci.get(i-1)+fibonacci.get(i-2);
-            if (yeniSayi<=üstSinir){
-            fibonacci.add(yeniSayi);
-            }
 
-        }
+            if (yeniSayi<=üstSinir){
+                fibonacci.add(yeniSayi);
+            }
+            i++;
+            }
         }
         return fibonacci;
         }

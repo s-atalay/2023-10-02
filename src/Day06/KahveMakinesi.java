@@ -32,6 +32,13 @@ Sonuç
 public class KahveMakinesi {
 
     public static void main(String[] args) {
+
+
+        System.out.println(kahveSecimi().substring(2)+" "+boySecimi()+" "+sutSecimi()+" "+sekerSecimi()+" kahveniz hazırdır. Afiyet olsun.");
+
+    }
+    public static String kahveSecimi(){
+
         Scanner scan = new Scanner(System.in);
         ArrayList<String> kahve = new ArrayList<>(Arrays.asList("1.Türk Kahvesi","2.Filtre Kahve","3.Americano"));
         System.out.println("Hangi kahveyi istersiniz?");
@@ -39,16 +46,69 @@ public class KahveMakinesi {
             System.out.println(each);
         }
         int secim = scan.nextInt();
-
-        System.out.println("Süt eklemek ister misiniz?Evet icin E'ye Hayir icin H'ye basiniz.");
-        char süt = scan.nextLine().toUpperCase().charAt(0);
-
+        while (secim < 1 || secim > 3){
+            System.out.println("Lütfen seceneklerden birini giriniz: ");
+            int secim2 = scan.nextInt();
+            secim=secim2;
+        }return kahve.get(secim-1);
+    }
+    public static String sekerSecimi(){
+        Scanner scan = new Scanner(System.in);
         System.out.println("Şeker ister misiniz? Evet icin E'ye Hayir icin H'ye basiniz.");
         char seker = scan.nextLine().toUpperCase().charAt(0);
+        String sekerSecimi = "Şekerli";
+        String sekerSecimi2 = "Sade";
+        while(!(seker =='E'||seker =='H')){
 
-        System.out.println("Hangi boyutta olsun? (Büyük Boy - Orta Boy - Küçük Boy olarak giriniz.)");
-        String boy = scan.nextLine();
-        System.out.println(kahve.get(secim-1).substring(2)+" "+boy+" hazirdir. Afiyet olsun.");
+            System.out.println("Şeker ister misiniz? Evet icin E'ye Hayir icin H'ye basiniz.");
+            char seker2 = scan.nextLine().toUpperCase().charAt(0);
+            seker = seker2;
+        }
+        if (seker=='E'){
+
+            return sekerSecimi;
+
+        }else return sekerSecimi2;
+    }
+
+    public static String sutSecimi(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Süt ister misiniz? Evet icin E'ye Hayir icin H'ye basiniz.");
+        char sut = scan.nextLine().toUpperCase().charAt(0);
+        String sutSecimi = "Sütlü";
+        String sutSecimi2 = "Sütsüz";
+        while(!(sut =='E'||sut =='H')){
+
+            System.out.println("Süt ister misiniz? Evet icin E'ye Hayir icin H'ye basiniz.");
+            char sut2 = scan.nextLine().toUpperCase().charAt(0);
+            sut = sut2;
+        }
+        if (sut=='E'){
+
+            return sutSecimi;
+
+        }else return sutSecimi2;
+    }
+    public static String boySecimi(){
+
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Hangi boyutta olsun? (Büyük Boy - Orta Boy - Küçük Boy olarak giriniz.):");
+        char boy = scan.nextLine().toUpperCase().charAt(0);
+        String boySecim = null;
+        while(!(boy =='O'||boy =='B' ||boy =='K')){
+
+            System.out.println("Hangi boyutta olsun? (Büyük Boy - Orta Boy - Küçük Boy olarak giriniz.):");
+            char boy2 = scan.nextLine().toUpperCase().charAt(0);
+            boy = boy2;
+        }
+        switch(boy){
+            case 'B': boySecim = "Büyük Boy";
+            case 'O': boySecim = "Orta Boy";
+            case 'K': boySecim =  "Küçük Boy";
+
+        }
+       return boySecim;
     }
 
 }

@@ -25,34 +25,42 @@ public class Manav {
 
         System.out.println("Lütfen almak istediginiz kiloyu girin: ");
         int klo = scan.nextInt();
-        System.out.println("Odenmesi gereken tutar: "+tutarHesaplama(urn, klo));
+        tutarHesaplama(urn,klo);
     }
 
     public static int tutarHesaplama (int urun,int kilo) {
 
-        int[] urunListesi = {1, 2, 3, 4, 5};
+        String [] urunListesi = {"1- Domates", "2- Patlıcan", "3- Kabak", "4- Biber", "5- Elma"};
         int[] fiyatListesi = {20, 35, 15, 10, 12};
+
         Scanner scan = new Scanner(System.in);
         int toplam=fiyatListesi[urun-1] * kilo;
-        char karar ='E';
+        System.out.println("Tutar: "+toplam);
 
-        do {
-            System.out.println("Baska bir urun almak ıster msisin?'E' veya 'H'ye basiniz.");
-            karar = scan.nextLine().toUpperCase().charAt(0);
+        String karar;
 
-            if (karar == 'E') {
+         do {
+            System.out.println("Baska bir urun almak ıster msisin?'Evet' veya 'Hayır'a basiniz.");
+             karar = scan.next();
+
+            if (karar.equalsIgnoreCase("evet")) {
+                for (String each: urunListesi) {
+                    System.out.println(each);
+                }
                 System.out.println("Lütfen almak istediginiz urunu girin: ");
                 int urn = scan.nextInt();
                 System.out.println("Lütfen almak istediginiz kiloyu girin: ");
                 kilo = scan.nextInt();
-                int tplm = fiyatListesi[urun] * kilo;
+                int tplm = fiyatListesi[urn-1] * kilo;
+                System.out.println("Tutar: "+tplm);
                 toplam += tplm;
-            }
-            else {
-                System.out.println(toplam);
 
             }
-        } while (karar !='H');
+            else if (karar.equalsIgnoreCase("hayır")){
+                System.out.println("Ödenmesi gereken tutar: "+toplam);
+
+            }else karar= "evet";
+        }while (karar.equalsIgnoreCase("evet"));
 
         return toplam;
     }
