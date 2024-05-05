@@ -1,4 +1,4 @@
-package Day10;
+package Day08;
 
 public class Runner {
     public static void main(String[] args) throws InterruptedException {
