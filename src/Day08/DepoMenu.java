@@ -1,5 +1,4 @@
-package Day10;
-import java.util.InputMismatchException;
+package Day08;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;

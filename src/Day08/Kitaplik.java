@@ -1,11 +1,9 @@
-package Day10;
+package Day08;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.time.LocalDateTime;
 import java.util.TreeMap;
 
 public class Kitaplik {
