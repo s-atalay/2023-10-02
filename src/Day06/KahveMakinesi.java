@@ -80,6 +80,7 @@ public class KahveMakinesi {
         while(!(sut =='E'||sut =='H')){
 
 
+
             System.out.println("Süt ister misiniz? Evet icin E'ye Hayir icin H'ye basiniz.");
             char sut2 = scan.nextLine().toUpperCase().charAt(0);
             sut = sut2;
